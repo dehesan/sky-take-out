@@ -72,7 +72,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 
     public void cleanShoppingCart() {
         Long userId = BaseContext.getCurrentId();
-        shoppingCartMapper.deleteUserId(userId);
+        shoppingCartMapper.deleteByUserId(userId);
     }
     public void subShoppingCart(ShoppingCartDTO shoppingCartDTO) {
         ShoppingCart shoppingCart = new ShoppingCart();
